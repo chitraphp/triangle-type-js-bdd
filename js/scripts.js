@@ -22,3 +22,17 @@ var triangleType = function(x,y,z) {
 
 
 };
+
+$(document).ready(function(){
+    debugger;
+    $("#triangle-type").submit(function(event) {
+        var input1 = parseInt($("#first").val());
+        var input2 = parseInt($("#second").val());
+        var input3 = parseInt($("#third").val());
+        var result = triangleType(input1,input2,input3);
+        $("#type").text(result);
+        $("#result").show();
+
+        event.preventDefault();
+    });
+});
